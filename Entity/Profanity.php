@@ -27,7 +27,7 @@ class Profanity
     /**
      * @var string
      *
-     * @ORM\Column(name="word", type="string", nullable=false, unique=true)
+     * @ORM\Column(name="word", type="string", nullable=false, unique=true, length=191)
      * @Assert\NotBlank()
      */
     private $word;
