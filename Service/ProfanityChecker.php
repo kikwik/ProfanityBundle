@@ -364,7 +364,7 @@ class ProfanityChecker
     public function clearSeparatorExpression(): self
     {
         // The second parameter cannot be empty
-        $this->separatorExpression  = $this->generateEscapedExpression([], ['¬']);
+        $this->separatorExpression = $this->generateEscapedExpression([], ['¬']);
 
         return $this;
     }
