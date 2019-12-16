@@ -54,6 +54,22 @@ $this->get('vangrg_profanity.storage')->setProfanities($badWords);
 
 ```
 
+### Bypass obscured characters
+
+By default, the profanity checker will remove obscured characters from a string.
+
+For example, it will treat the follow as the same:
++ `badword`
++ `b|a d$w?o!r-d`
++ `b|â|d|Ψ|0|r|d`
+
+This can cause some issues (false positive in `put a logo` treated as `puta logo`); call `clearSeparatorExpression()` to prevent this.
+
+```php
+$check = $this->get('vangrg_profanity.checker');
+$check->clearSeparatorExpression();
+```
+
 ### Override profanities configuration
 
 ```yaml
