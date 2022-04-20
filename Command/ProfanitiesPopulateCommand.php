@@ -69,5 +69,7 @@ class ProfanitiesPopulateCommand extends Command
         $em->flush();
 
         $output->writeln(sprintf('Populated %d words', $i));
+        
+        return Command::SUCCESS;
     }
 }
